@@ -1,0 +1,14 @@
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    font-size: 100px;
+    text-align: center;
+    background-color: rgb(194, 194, 235);
+}
+
+.outer {
+    display: flex;
+    gap: 200px;
+}

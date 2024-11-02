@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object Fit and position</title>
+</head>
+<style>
+    .container{
+        height: 488px;
+        width: 466px;
+        border: 2px solid black;
+        /* background-color: azure; */
+        background-image: url(https://nationalzoo.si.edu/sites/default/files/animals/giantpanda-001.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+
+    }
+
+    img{
+        width: 466px;
+        height: 488px;
+        object-fit: cover;
+        /* object-fit: fill; */
+        object-position: 10px 20px;
+        /* object-fit: contain ; */
+    }
+</style>
+<body>
+    <div class="container">
+        <!-- <img src="https://nationalzoo.si.edu/sites/default/files/animals/giantpanda-001.jpg" alt=""> -->
+    </div>
+ 
+    
+</body>
+</html>

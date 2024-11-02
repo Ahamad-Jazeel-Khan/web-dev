@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 51, 0);
+            margin-top: 300px;
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        #btn {
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        #btn:hover {
+            background-color: rgba(0, 0, 255, 0.356);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="button">
+            <button id="btn">Click to Hack</button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script>
+        let btn = document.getElementById('btn');
+
+        const rand = Math.floor(Math.random() * 7);
+        console.log(rand);
+
+        btn.addEventListener("click", () => {
+            document.getElementById("btn").textContent = "You are hacked"
+            btn.setAttribute('disabled', '');
+            print()
+
+            function delay(ms) {
+                return new Promise(resolve => {
+                    setTimeout(resolve, ms);
+                });
+            }
+
+            async function print() {
+                const lines = [
+                    "Intializing Hacking",
+                    "Reading Your Files",
+                    "Password Files Detected",
+                    "Sending all password and personal files to server",
+                    "cleaning up",
+                ]
+
+                let output = document.getElementById('output');
+
+                for (let line of lines) {
+                    const rand = Math.floor(Math.random() * 7000);
+                    await delay(rand)
+
+                    let lineElement = document.createElement('div');
+                    output.appendChild(lineElement);
+                    await BlinkDots(lineElement, line);
+                }
+            }
+
+            async function BlinkDots(element, text) {
+                element.textContent = text;
+                await delay(500);
+
+                let dotCount = 0;
+                let dotInterval = setInterval(() => {
+                    if (dotCount < 3) {
+                        element.textContent += ".";
+                        dotCount++;
+                    } else {
+                        element.textContent = text;
+                        dotCount = 0;
+                    }
+                }, 500);
+
+                const randDelay = Math.floor(Math.random() * 7000);
+                await delay(randDelay);
+                clearInterval(dotInterval);
+            }
+        })
+    </script>
+</body>
+
+</html>

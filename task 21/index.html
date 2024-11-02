@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Outlines </title>
+</head>
+<style>
+    .box{
+        border: 2px solid black;
+       padding: 34px;
+       /* box-shadow: h-offset v-offset blur spread color inset; */
+       box-shadow: 5px 15px 5px grey;
+    }
+
+    .text-element { 
+        /* text-shadow: h-offset v-offset blur color; */
+        text-shadow: 2px 2px 4px #888888;
+        outline: 2px solid black; 
+        border: 2px solid black;
+        outline-offset:45px;
+    }
+
+</style>
+<body>
+    <div class="box">
+        I am a Box
+    </div>
+
+    <p class="text-element">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, quasi id molestias saepe mollitia quas, aut ipsam consequatur, quam velit obcaecati quibusdam omnis. Esse, assumenda earum! Debitis iste aut omnis minima laborum, doloribus voluptatum.</p>
+    
+</body>
+</html>
